@@ -1,0 +1,177 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  max-width: 930px;
+  margin: 0 auto;
+}
+
+.textWrapper {
+  display: flex;
+  margin-top: 110px;
+  margin-bottom: 96px;
+}
+
+.textWrapper h1 {
+  font-family: PT Serif;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 48px;
+  letter-spacing: -0.045em;
+  width: 120%;
+}
+
+.textWrapper h2 {
+  font-family: Poppins;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 27px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.textWrapper p {
+  font-family: Poppins;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 27px;
+}
+
+.cardsContainer {
+  margin: 0;
+  display: flex;
+  gap: 50px 5px;
+  align-content: space-between;
+  flex-flow: column wrap;
+  height: 950px;
+}
+
+.card:nth-child(3n + 1) {
+  order: 1;
+}
+.card:nth-child(3n + 2) {
+  order: 2;
+}
+.card:nth-child(3n) {
+  order: 3;
+}
+
+.card:nth-child(2) {
+  margin-top: 50px;
+}
+
+.card {
+  position: relative;
+  width: 263px;
+  margin: 0px;
+}
+.card img {
+  width: 238px;
+}
+
+.card .job {
+  position: absolute;
+  width: 100%;
+  transform-origin: bottom left;
+  transform: rotate(90deg);
+  top: -15px;
+  left: 247px;
+  text-transform: uppercase;
+  font-family: "PT Serif", serif;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.card .name {
+  font-family: Poppins;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 27px;
+}
+
+footer {
+  text-align: center;
+  font-family: Montserrat;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  color: #a9a9a9;
+  margin-bottom: 28px;
+}
+
+@media (max-width: 975px) {
+  body {
+    margin: 0 10px;
+  }
+}
+@media (max-width: 820px) {
+  .textWrapper {
+    flex-direction: column;
+  }
+
+  .textWrapper h1 {
+    margin-bottom: 38px;
+    width: 90%;
+  }
+
+  .textWrapper p {
+    max-width: 400px;
+  }
+
+  .cardsContainer {
+    height: 1400px;
+  }
+  .card:nth-child(2n + 1) {
+    order: 1;
+  }
+  .card:nth-child(2n) {
+    order: 2;
+  }
+}
+
+@media (max-width: 550px) {
+  .textWrapper {
+    display: flex;
+    margin-top: 17px;
+    margin-bottom: 60px;
+  }
+
+  .textWrapper p {
+    font-size: 14px;
+    line-height: 21px;
+    max-width: 310px;
+  }
+  .cardsContainer {
+    height: 920px;
+  }
+  .card:nth-child(2n + 1) {
+    order: 1;
+  }
+  .card:nth-child(2n) {
+    order: 2;
+  }
+
+  .card {
+    width: 160px;
+  }
+
+  .card img {
+    width: 140px;
+  }
+
+  .card .job {
+    top: -12px;
+    left: 147px;
+    font-size: 10px;
+    line-height: 13px;
+  }
+
+  .card .name {
+    font-size: 14px;
+    line-height: 21px;
+  }
+}
